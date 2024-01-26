@@ -1,0 +1,8 @@
+-Login signup page
+-once login-landing page(main page) heading for surviovors(images and animation)
+ supply needed->emergency wala option(order option goes to order page)
+ have thoughts(forums page goes)
+ track order(goes to tracking order page)
+ Dashboard(our)
+
+-login/signup
