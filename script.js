@@ -54,15 +54,15 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   const username = event.target.elements[0].value;
   const password = event.target.elements[1].value;
 
-  
   if (username === 'admin' && password === 'password') {
-      
+      localStorage.setItem('username', username);
       window.location.href = 'home.html';
   } else {
       
       alert('Login failed');
   }
 });
+
 
 
 
