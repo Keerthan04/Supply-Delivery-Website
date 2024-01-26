@@ -12,5 +12,5 @@ if (storedUsername) {
 }
 
 function redirect(){
-    window.location.href = 'home.html';
+    window.location.href = 'guide.html';
 }
