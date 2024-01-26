@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "gil-reg";
+    src: url("fonts/Gilroy-Regular.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gil-reg";
+}
+body,html{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+.main{
+    width: 100%;
+    height:100vh;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+    pointer-events: all;
+}
+a:hover{
+    zoom: 120%;
+    color: #3498db;
+}
+.back{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.back img{
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+}
+.top{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100vh;
+    display: flex;
+}
+.working-area{
+    margin: 0 auto;
+    width:80%;
+    height: 100vh;
+    position: relative;
+    color:white;
+}
+.nav{
+    width:100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.nav-left{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap:40px;
+}
+.nav-left img{
+    height:20vh;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.nav-right img{
+    position: relative;
+    height:100%;
+}
+.content{
+    width: 100%;
+    height: calc(100vh - 14vh);
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:0%;
+    transform: translate(0% ,-50%);
+    margin-top: 5vh;
+}
+.com-heading{
+    width: 100%;
+    height:10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.forum-section{
+    width: 100%;
+    height: 90%;
+    padding-top: 2vh;
+    overflow: scroll;
+}
+.forum-section::-webkit-scrollbar {
+    width: 12px; 
+}
+
+.forum-section::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+}
+
+.forum-section::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+.forum-section {
+    scrollbar-width: thin; 
+}
+
+.forum-section::-moz-scrollbar-thumb {
+    background-color: transparent; 
+}
+
+.forum-section::-moz-scrollbar-track {
+    background-color: transparent; 
+}
+.forum-post{
+    width: 100%;
+    height:50%;
+    margin:2vh 0;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    width: 100%;
+    height: 30%;
+}
+.title-left i{
+    font-size: 2vw;
+    color: #3498db;
+    margin: 2vw 0;
+}
+.forum-content{
+    width: calc(100% - 2vw);
+    height: 60%;
+    margin-left: 2vw;
+    padding: 1vw;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    overflow: scroll;
+}
+.forum-content::-webkit-scrollbar {
+    width: 12px; 
+}
+
+.forum-content::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+}
+
+.forum-content::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+.forum-content {
+    scrollbar-width: thin; 
+}
+
+.forum-content::-moz-scrollbar-thumb {
+    background-color: transparent; 
+}
+
+.forum-content::-moz-scrollbar-track {
+    background-color: transparent; 
+}
+.add{
+    width:100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add button{
+    padding: 1vw;
+    font-size: 1vw;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #3498db;
+    color: black;
+}
+.forum-button{
+    width: 100%;
+    height: 10%;
+    width: calc(100% - 2vw);
+    margin-left: 2vw;
+    gap: 2vw;
+}
+#rs{
+    color: #3498db;
+    cursor: pointer;
+    width: 3vw;
+    border-radius: 10px;
+    background-color: none;
+}
+#like{
+    cursor: pointer;
+    width: 3vw;
+    border-radius: 10px;
+}
+#like.liked {
+    color: rgb(190, 18, 18);
+}
+
+.content-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 2vw;
+}
+#L{
+    color:#3498db;
+}
+#but{
+    padding: 1vw;
+    font-size: 2vw;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #3498db;
+    color: black;
+    gap:20px;
+}
+.emergency{
+    padding: 1vw;
+    font-size: 2vw;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color:rgb(143, 35, 35);
+    color: black;
+    gap:20px;
+}
+@media screen and (max-width: 420px) {
+    .content{
+        margin-top: 10vh;
+        
+    }
+}
