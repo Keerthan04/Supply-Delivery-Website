@@ -59,3 +59,6 @@ if (storedUsername) {
 } else {
   console.log('Username not found in local storage');
 }
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('#menu');
+

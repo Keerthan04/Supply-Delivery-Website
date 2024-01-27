@@ -11,7 +11,10 @@
 "onMouse":{"value":0},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},
 "discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},
 "noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}}});*/
-
+function myFunction() {
+    var navRight = document.getElementById("nav-right");
+    navRight.classList.toggle("open");
+}
 function typeWriter(text, targetElement, interval) {
     let i = 0;
     const heading = document.getElementById(targetElement);
