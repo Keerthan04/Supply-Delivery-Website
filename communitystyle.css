@@ -188,7 +188,7 @@ a:hover{
 }
 .add button{
     padding: 1vw;
-    font-size: 1vw;
+    font-size: 1.3vw;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -251,6 +251,55 @@ a:hover{
 @media screen and (max-width: 420px) {
     .content{
         margin-top: 10vh;
-        
+        width: 100vw;
+        height: 100vh;
+    }
+    .forum-section{
+        width: 100%;
+        height: 80%;
+        padding-top: 2vh;
+        overflow: scroll;
+        margin-top: 5vh;
+    }
+    .forum-post{
+        width: 100%;
+        height:50%;
+        margin:2vh 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Add this media query at the end of your CSS */
+@media screen and (max-width: 768px) {
+    .nav{
+        justify-content: space-around;
+    }
+    .nav-right {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust this value based on your design */
+        right: 0;
+        width: 40%;
+        background-color: #333; /* Background color for the mobile navigation */
+        text-align: center;
+        z-index: 1;
+    }
+
+    .nav-right a {
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+    }
+
+    .nav-right a:hover {
+        background-color: #555;
+    }
+
+    .nav-right.show {
+        display: flex;
     }
 }
