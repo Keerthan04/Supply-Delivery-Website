@@ -270,36 +270,3 @@ a:hover{
         gap: 10px;
     }
 }
-/* Add this media query at the end of your CSS */
-@media screen and (max-width: 768px) {
-    .nav{
-        justify-content: space-around;
-    }
-    .nav-right {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust this value based on your design */
-        right: 0;
-        width: 40%;
-        background-color: #333; /* Background color for the mobile navigation */
-        text-align: center;
-        z-index: 1;
-    }
-
-    .nav-right a {
-        padding: 15px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 20px;
-        color: white;
-    }
-
-    .nav-right a:hover {
-        background-color: #555;
-    }
-
-    .nav-right.show {
-        display: flex;
-    }
-}

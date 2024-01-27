@@ -49,9 +49,5 @@ function add(){
   window.location.href="add.html";
 }
 
-function toggleNav() {
-  var navLinks = document.querySelector('.nav-right');
-  navLinks.classList.toggle('show');
-}
 
 

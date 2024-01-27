@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Gateway</title>
+    <link href="trackerstyle.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo1.png">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
+</head>
+<body>
+    <div class="main">
+        <div class="back">
+            <img src="./Images/12.jpg" alt="">
+        </div>
+        <div class="top">
+            <div class="working-area">
+                <div class="nav">
+                    <div class="nav-left">
+                        <img src="logo.png">
+                        <h4><span id='L'>G</span>alactic Gateway</h4>
+                    </div>
+                    <div class="nav-right">
+                        <a href="menu.html">Order</a>
+                        <a href="reservations.html">Community</a>
+                        <a href="aboutus.html">Track</a>
+                        <a href="#"><i class="fa-solid fa-rocket"></i></a>
+                        <a href="user.html"><i class="fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h1><span id="L">T</span>rack Your Order</h1>
+                    <div class="form">
+                        <input id="order" type="text" placeholder="Enter Your Order ID">
+                        <button type="submit" onclick="display()">Track</button>
+                    </div>
+                    <div id="track" style="display:none;">
+                        <div class="info">
+                            <p id="info"></p>
+                            <p id="user"></p>
+                        </div>
+                        <div class="tracking-progress">
+                            <div class="tracking-stage">
+                                <div class="tracking-icon shipped">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+                                <p>Loaded</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="tracking-stage">
+                                <div class="tracking-icon loaded">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                </div>
+                                <p>Unloaded</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="tracking-stage">
+                                <div class="tracking-icon unloaded">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+                                <p>Shipped</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" style="width: 75%;"></div>
+                            </div>
+                            <div class="tracking-stage">
+                                <div class="tracking-icon received">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p>Received</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <div class="expected-delivery">
+                            <p>Expected delivery by: <span class="delivery-date">3 days</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/67af9d68cc.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="ordertracker.js"></script>
+</body>
+</html>
