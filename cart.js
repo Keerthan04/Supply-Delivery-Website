@@ -1,35 +1,61 @@
-let cart = [];
-let total = 0;
+const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+const cartTotal = localStorage.getItem('total') || '0';
+const itemsField = document.getElementById('items');
 
-function addToCart(productName, productPrice) {
-    cart.push({ name: productName, price: productPrice });
-    total += productPrice;
+cartItems.forEach(item => {
+  const productDiv = document.createElement('div');
+  productDiv.className = 'each-content';
+  productDiv.innerHTML = `
+    <div class="product searchable" id="product1">
+    <div class="details">
+        <div class="det-cont">
+            <h3>${item.name}</h3>
+            <p>$${item.price.toFixed(2)}</p>
+        </div>
+        <button class="remove" onclick="remove()">remove</button>
+    </div>
+    </div>
+  `;
+  itemsField.appendChild(productDiv);
+});
 
-    updateCart();
-}
+const totalDiv = document.createElement('div');
+totalDiv.className = 'total';
+totalDiv.innerHTML = `Total: $${parseFloat(cartTotal).toFixed(2)}
+                      <button>checkout</button>`;
+itemsField.appendChild(totalDiv);
 
-function updateCart() {
-    const cartItems = document.getElementById('cartItems');
-    const totalElement = document.getElementById('total');
-
-    cartItems.innerHTML = '';
+itemsField.addEventListener('click', function(event) {
+if (event.target.className === 'remove') {
+    const productDiv = event.target.closest('.each-content');
+    const itemName = productDiv.querySelector('h3').textContent;
+    const itemIndex = cartItems.findIndex(item => item.name === itemName);
     
-    cart.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `${item.name}: $${item.price.toFixed(2)}`;
-        cartItems.appendChild(listItem);
-    });
+    if (itemIndex > -1) {
+ 
+    cartTotal -= cartItems[itemIndex].price;
+    localStorage.setItem('total', cartTotal.toString());
 
-    totalElement.textContent = total.toFixed(2);
-}
+ 
+    cartItems.splice(itemIndex, 1);
+    localStorage.setItem('cart', JSON.stringify(cartItems));
 
-function checkout() {
-    if (cart.length > 0) {
-        alert('Checkout successful!\nTotal amount: $' + total.toFixed(2));
-        cart = [];
-        total = 0;
-        updateCart();
-    } else {
-        alert('Your cart is empty. Add items to your cart first.');
+
+    productDiv.remove();
+    document.querySelector('.total').innerHTML = `Total: $${parseFloat(cartTotal).toFixed(2)}`;
     }
+}
+});
+
+const storedUsername = localStorage.getItem('username');
+
+if (storedUsername) {
+  const details=document.getElementById("username");
+  details.innerText=`Username : ${storedUsername}`;
+  document.getElementById("Email").innerText=`Email : ${storedUsername}@lunarisprime.com`;
+  document.getElementById("Address").innerText="Address: Stellar Crescent, Lunaris Prime,Celestial Sector: Alpha Centauri,Postal Code: LP-42X8Z";
+  document.getElementById("DOA").innerText="Date Of Arrival: 22/5/2072";
+  document.getElementById("ROI").innerText="Recored of Infection: No";
+} else {
+  console.log('Username not found in local storage');
 }
