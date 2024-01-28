@@ -32,10 +32,12 @@ main{
     display: flex;
     position: relative;
     overflow: hidden;
+    align-items: center;
 }
 .login{
     min-width:100%;
     height: 100%;
+    justify-self:center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +54,16 @@ main{
     font-size: 7vh;
     margin-bottom: 1em;
 }
-
+.right input{
+    background-color: rgb(117, 117, 117);
+    border:none;
+    color:#fff;
+    font-weight: 300;
+}
+.right input::placeholder{
+    color:#fff;
+    font-weight: 300;
+}
 #login-form input {
     width: 100%;
     padding: 2vh;
@@ -165,14 +176,20 @@ main{
 }
 @media  screen and (max-width:420px) {
     .content h2{
-        font-size: 6vw;
+        font-size: 4vw;
     }
     .content h4{
         font-size: 3vw;
     }
+    .heading h4{
+        padding: 0;
+    }
+    .content{
+        gap: 10px;
+    }
     main{
         flex-direction: column;
-        height: 100%;
+        height: 90%;
     }
     .right{
         width: 100%;
@@ -182,18 +199,19 @@ main{
     }
     .login{
         width: 100%;
-        height:50%;
+        height:60%;
     }
     .signup{
         width: 100%;
-        height:40%;
+        height:50%;
+        align-self: flex-end;
     }
     .content{
         width: 100%;
-        height:50%;
+        height:40%;
     }
     .image img{
-        width: 80%;
+        width: 70%;
         height: auto;
         border-radius: 10px;
     }
@@ -201,14 +219,17 @@ main{
         font-size: 2em;
         margin-bottom: 0;
     }
+    #signup-form h2 {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
     .heading{
         width: 100%;
-        height: 50%;
+        height: 30%;
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
     }
 
     
