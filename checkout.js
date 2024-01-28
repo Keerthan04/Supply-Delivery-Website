@@ -22,7 +22,7 @@ cartItems.forEach(item => {
 const totalDiv = document.createElement('div');
 totalDiv.className = 'total';
 totalDiv.innerHTML = `Total: $${parseFloat(cartTotal).toFixed(2)}
-                      <a href="checkout.html"><button id="but">checkout</button></a>`;
+                    `;
 itemsField.appendChild(totalDiv);
 
 itemsField.addEventListener('click', function(event) {
@@ -49,26 +49,33 @@ if (event.target.className === 'remove') {
 }
 });
 
-const storedUsername = localStorage.getItem('username');
-
-if (storedUsername) {
-  const details=document.getElementById("username");
-  details.innerText=`Username : ${storedUsername}`;
-  document.getElementById("Email").innerText=`Email : ${storedUsername}@lunarisprime.com`;
-  document.getElementById("Address").innerText="Address: Stellar Crescent, Lunaris Prime,Celestial Sector: Alpha Centauri,Postal Code: LP-42X8Z";
-  document.getElementById("DOA").innerText="Date Of Arrival: 22/5/2072";
-  document.getElementById("ROI").innerText="Recored of Infection: No";
-} else {
-  console.log('Username not found in local storage');
-}
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('#menu');
-
 function myFunction() {
-  var navRight = document.getElementById("nav-right");
-  navRight.classList.toggle("open");
-}
+    var navRight = document.getElementById("nav-right");
+    navRight.classList.toggle("open");
+  }
+  
+  function home(){
+    window.location.href="home.html";
+  }
 
-function home(){
-  window.location.href="home.html";
+  function place() {
+    const fullName = document.getElementById('fullName').value;
+    const address = document.getElementById('address').value;
+    const city = document.getElementById('city').value;
+    const zipCode = document.getElementById('zipCode').value;
+    const cardNumber = document.getElementById('cardNumber').value;
+    const expirationDate = document.getElementById('expirationDate').value;
+    const cvv = document.getElementById('cvv').value;
+    if (!fullName || !address || !city || !zipCode || !cardNumber || !expirationDate || !cvv) {
+        alert("Please fill in all fields in the checkout form.");
+    } else {
+        if (cartTotal === 0) {
+            alert("No items in the cart to ship");
+        } else {
+            setTimeout(() => {
+                alert("Thank you for your order");
+                window.location.href = "order.html";
+            }, 400);
+        }
+    }
 }
