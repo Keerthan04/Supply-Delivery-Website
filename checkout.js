@@ -28,11 +28,8 @@ itemsField.appendChild(totalDiv);
 itemsField.addEventListener('click', function(event) {
 if (event.target.className === 'remove') {
     const productDiv = event.target.closest('.each-content');
-    console.log(productDiv);
     const itemName = productDiv.querySelector('h3').textContent;
-    console.log(itemName);
     const itemIndex = cartItems.findIndex(item => item.name === itemName);
-    console.log(itemIndex);
     if (itemIndex > -1) {
  
     cartTotal -= cartItems[itemIndex].price;
@@ -69,13 +66,10 @@ function myFunction() {
     if (!fullName || !address || !city || !zipCode || !cardNumber || !expirationDate || !cvv) {
         alert("Please fill in all fields in the checkout form.");
     } else {
-        if (cartTotal === 0) {
+        if (cartTotal === '0') {
             alert("No items in the cart to ship");
         } else {
-            setTimeout(() => {
-                alert("Thank you for your order");
-                window.location.href = "order.html";
-            }, 400);
+            
         }
     }
 }
