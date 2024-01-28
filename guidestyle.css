@@ -94,8 +94,12 @@ a:hover{
     transform-origin: top;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 3;
+    background-color: #ddd;
+    font-weight: 500;
 }
-
+.nav-right #myLinks a{
+    color: black;
+}
 .nav-right.open #myLinks {
     opacity: 1;
     transform: scaleY(1);
@@ -111,7 +115,7 @@ a:hover{
 }
 
 .nav-right a:hover {
-    background-color: #ddd;
+    background-color: rgb(129, 126, 126);
     color: black;
 }
 
@@ -136,14 +140,14 @@ a:hover{
 }
 .main-div{
     width: 100%;
-    height: calc(100vh - 14vh);
+    height: calc(100vh - 17vh);
     display:flex;
     text-align: left;
     position: absolute;
     top:50%;
     left:0%;
     transform: translate(0% ,-50%);
-    margin-top: 5vh;
+    margin-top: 2vh;
     border-radius: 12px;
     border: 2px solid whitesmoke;
     overflow: hidden;
