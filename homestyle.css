@@ -52,9 +52,11 @@ a:hover{
 .working-area{
     margin: 0 auto;
     width:80%;
-    height: calc(100vh - 13vh);
+    height: calc(100vh - 19vh);
     position: relative;
     color:black;
+    display: flex;
+    flex-direction: column;
 }
 .navbar {
     width: 100%;
@@ -92,15 +94,19 @@ a:hover{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 5vh);
     right: 0;
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 3;
+    background-color: #ddd;
+    font-weight: 500;
 }
-
+.nav-right #myLinks a{
+    color: black;
+}
 .nav-right.open #myLinks {
     opacity: 1;
     transform: scaleY(1);
@@ -116,7 +122,7 @@ a:hover{
 }
 
 .nav-right a:hover {
-    background-color: #ddd;
+    background-color: rgb(129, 126, 126);
     color: black;
 }
 
@@ -139,18 +145,15 @@ a:hover{
         display: block;
     }
 }
-
+.footer{
+    width: 100%;
+    height:6vh;
+}
 .content{
     width: 100%;
-    height: calc(100vh - 14vh);
+    height: 100%;
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top:50%;
-    left:0%;
-    transform: translate(0% ,-50%);
     overflow: scroll;
     margin-top: 3vh;
 }
@@ -180,20 +183,18 @@ a:hover{
 }
 .thing1{
     width: 100%;
-    height: calc(100vh - 22vh);
+    height: 100%;
     display:flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top:50%;
-    left:0%;
     margin-top: 3vh;
     margin-bottom: 3vh;
 }
 .thing2{
     width: 100%;
-    height: calc(100vh - 24vh);
+    height: 100%;
     display:flex;
     justify-content: space-between;
     margin-top: 3vh;
@@ -238,8 +239,7 @@ a:hover{
     border: 1px solid black;
 }
 #about{
-    position: fixed;
-    margin-bottom: 5vh;
+    margin-bottom: 0.1vh;
 }
 
 .content-right{
@@ -353,13 +353,14 @@ button:hover{
         margin-top: 1vh;
     }
     .working-area{
-        height: calc((100vh - 6vh));
+        height: calc((100vh - 12vh));
     }
     .thing1{
         margin-top: 1vh;
         margin-bottom: 1vh;
         height: calc(100vh - 6vh);
         position: relative;
+        color: white;
     }
     .content h2 {
       font-size: 5vw;
@@ -384,5 +385,23 @@ button:hover{
     #contact{
         font-size: 3vw;
     }
-    
+    .thing1{
+        width: 100%;
+        height: 60vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+    .thing2{
+        width: 100%;
+        height: 40vh;
+        display:flex;
+        justify-content: space-between;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        color: black;
+    }
   }
