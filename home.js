@@ -15,6 +15,15 @@ function myFunction() {
     var navRight = document.getElementById("nav-right");
     navRight.classList.toggle("open");
 }
+
+function home(){
+    window.location.href="home.html";
+}
+
+function order(){
+    window.location.href="order.html";
+}
+
 function typeWriter(text, targetElement, interval) {
     let i = 0;
     const heading = document.getElementById(targetElement);
