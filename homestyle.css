@@ -54,7 +54,7 @@ a:hover{
     width:80%;
     height: calc(100vh - 13vh);
     position: relative;
-    color:white;
+    color:black;
 }
 .navbar {
     width: 100%;
@@ -198,7 +198,7 @@ a:hover{
     justify-content: space-between;
     margin-top: 3vh;
     margin-bottom: 3vh;
-    color: antiquewhite;
+    color: black;
 }
 .content h2{
     font-size: 4vw;
@@ -245,7 +245,7 @@ a:hover{
 .content-right{
     width:55%;
     height: 100%;
-    color: antiquewhite;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -337,7 +337,7 @@ a:hover{
 button:hover{
     zoom: 120%;
 }
-@media screen and (max-width: 768px) and (min-width: 40px) {
+@media screen and (max-width: 768px) and (min-width: 200px) {
     .working-area {
       width: 100%;
     }

@@ -12,25 +12,30 @@
 <body>
     <div class="main">
         <div class="back">
-            <img src="./Images/7.jpg" alt="">
+            <img src="./order images/1111.png" alt="">
         </div>
         <div class="top">
-            <div class="working-area">
-                <div class="nav">
-                    <div class="nav-left">
-                        <img src="logo.png">
-                        <h4><span id='L'>G</span>alactic Gateway</h4>
-                    </div>
-                    <div class="nav-right">
-                        <a href="menu.html">Order</a>
-                        <a href="reservations.html">Community</a>
-                        <a href="aboutus.html">Track</a>
-                        <a href="cart.html"><i class="fa-solid fa-rocket"></i></a>
-                        <a href="user.html"><i class="fa-regular fa-user"></i></a>
-                    </div>
+            <nav class="navbar">
+                <div class="nav-left">
+                    <img src="logo.png">
+                    <h4 style="cursor: pointer;" onclick="home()"><span id='L'>G</span>alactic Gateway</h4>
                 </div>
+                <div id="nav-right" class="nav-right">
+                    <a href="cart.html" title="Visit Cart"><i class="fa-solid fa-rocket"></i></a>
+                    <a href="user.html" title="View User Info"><i class="fa-regular fa-user"></i></a>
+                    <a href="javascript:void(0);" class="icon" title="View Options" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+                    <div id="myLinks">
+                        <a href="home.html">Home</a>
+                        <a href="guide.html">Guide</a>
+                        <a href="community.html">Community</a>
+                        <a href="tracker.html">Track</a>
+                        <a href="aboutus.html">About Us</a>
+                    </div>
+                </div>        
+            </nav>
+            <div class="working-area">
                 <div class="content">
-                    <h1><span id="L">O</span>rder Here</h1>
+                    <h2><span id="L">O</span>rder Here</h2>
                     <div class="search">
                         <div class="s">
                             <input type="search"  id="searchInput" placeholder="Search">
@@ -41,7 +46,7 @@
                         <div class="each-cont">
                             <div class="product searchable" id="product1">
                                 <div class="prd-img">
-                                    <img src="water.jpg" alt="Water Bottle">
+                                    <img src="./order images/8.png" alt="Water Bottle">
                                 </div>
                                 <div class="details">
                                     <div class="det-cont">
@@ -56,7 +61,7 @@
                         <div class="each-cont">
                             <div class="product searchable" id="product2">
                                 <div class="prd-img">
-                                    <img src="oxygen_tank.jpg" alt="Oxygen Tank">
+                                    <img src="./order images/1.jpg" alt="Oxygen Tank">
                                 </div>
                                 <div class="details">
                                     <div class="det-cont">
@@ -71,7 +76,7 @@
                         <div class="each-cont">
                             <div class="product searchable" id="product3">
                                 <div class="prd-img">
-                                    <img src="freeze_dried_food.jpg" alt="Freeze-Dried Food Pack">
+                                    <img src="./order images/2.png" alt="Freeze-Dried Food Pack">
                                 </div>
                                 <div class="details">
                                     <div class="det-cont">
@@ -86,7 +91,7 @@
                         <div class="each-cont">
                             <div class="product searchable" id="product4">
                                 <div class="prd-img">
-                                    <img src="space_blanket.jpg" alt="Space Blanket">
+                                    <img src="./order images/7.png" alt="Space Blanket">
                                 </div>
                                 <div class="details">
                                     <div class="det-cont">
@@ -101,7 +106,7 @@
                         <div class="each-cont">
                             <div class="product searchable" id="product5">
                                 <div class="prd-img">
-                                    <img src="solar_charger.jpg" alt="Solar Charger">
+                                    <img src="./order images/5.png" alt="Solar Charger">
                                 </div>
                                 <div class="details">
                                     <div class="det-cont">
@@ -110,6 +115,171 @@
                                         <p>$25.00</p>
                                     </div>
                                     <button class="add-to-cart" onclick="addToCart('Solar Charger', 25.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product6">
+                                <div class="prd-img">
+                                    <img src="./order images/16.png" alt="Space Mask">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Space Mask</h3>
+                                        <h5>Breathe Safely in Alien Atmospheres</h5>
+                                        <p>$15.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Space Mask', 15.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product7">
+                                <div class="prd-img">
+                                    <img src="./order images/10.jpg" alt="Space Tablets">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Space Tablets</h3>
+                                        <h5>Stay Healthy with Interplanetary Medication</h5>
+                                        <p>$40.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Space Tablets', 40.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>                
+                        <div class="each-cont">
+                            <div class="product searchable" id="product8">
+                                <div class="prd-img">
+                                    <img src="./order images/19.png" alt="Space Suit">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Space Suit</h3>
+                                        <h5>Explore Alien Terrains in Style</h5>
+                                        <p>$150.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Space Suit', 150.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product10">
+                                <div class="prd-img">
+                                    <img src="./order images/11.png" alt="Anti-Gravity Boots">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Anti-Gravity Boots</h3>
+                                        <h5>Float Above the Surface of Alien Worlds</h5>
+                                        <p>$80.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Anti-Gravity Boots', 80.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product11">
+                                <div class="prd-img">
+                                    <img src="./order images/12.png" alt="Galactic Map">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Galactic Map</h3>
+                                        <h5>Navigate the Stars with Precision</h5>
+                                        <p>$30.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Galactic Map', 30.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product12">
+                                <div class="prd-img">
+                                    <img src="./order images/18.png" alt="Zero Gravity Chair">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Zero Gravity Chair</h3>
+                                        <h5>Relax in Weightlessness</h5>
+                                        <p>$120.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Zero Gravity Chair', 120.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product13">
+                                <div class="prd-img">
+                                    <img src="./order images/14.png" alt="Space Goggles">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Space Goggles</h3>
+                                        <h5>Witness Celestial Phenomena Up Close</h5>
+                                        <p>$50.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Space Goggles', 50.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product14">
+                                <div class="prd-img">
+                                    <img src="./order images/13.png" alt="Space Dust Vacuum">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Space Dust Vacuum</h3>
+                                        <h5>Clean Your Spacesuit After Interstellar Walks</h5>
+                                        <p>$35.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Space Dust Vacuum', 35.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product15">
+                                <div class="prd-img">
+                                    <img src="./order images/17.png" alt="Teleportation Device">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Teleportation Device</h3>
+                                        <h5>Instant Travel Across the Cosmos</h5>
+                                        <p>$200.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Teleportation Device', 200.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product16">
+                                <div class="prd-img">
+                                    <img src="./order images/15.png" alt="Space Heater">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Space Heater</h3>
+                                        <h5>Stay Warm in the Cold Expanse of Space</h5>
+                                        <p>$55.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Space Heater', 55.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each-cont">
+                            <div class="product searchable" id="product18">
+                                <div class="prd-img">
+                                    <img src="./order images/9.jpg" alt="Space Journal">
+                                </div>
+                                <div class="details">
+                                    <div class="det-cont">
+                                        <h3>Space Journal</h3>
+                                        <h5>Document Your Interstellar Adventures</h5>
+                                        <p>$12.00</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart('Space Journal', 12.00)">Add to Cart</button>
                                 </div>
                             </div>
                         </div>

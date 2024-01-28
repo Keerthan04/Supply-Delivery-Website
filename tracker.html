@@ -15,22 +15,27 @@
             <img src="./Images/12.jpg" alt="">
         </div>
         <div class="top">
-            <div class="working-area">
-                <div class="nav">
-                    <div class="nav-left">
-                        <img src="logo.png">
-                        <h4><span id='L'>G</span>alactic Gateway</h4>
-                    </div>
-                    <div class="nav-right">
-                        <a href="menu.html">Order</a>
-                        <a href="reservations.html">Community</a>
-                        <a href="aboutus.html">Track</a>
-                        <a href="#"><i class="fa-solid fa-rocket"></i></a>
-                        <a href="user.html"><i class="fa-regular fa-user"></i></a>
-                    </div>
+            <nav class="navbar">
+                <div class="nav-left">
+                    <img src="logo.png">
+                    <h4 style="cursor: pointer;" onclick="home()"><span id='L'>G</span>alactic Gateway</h4>
                 </div>
+                <div id="nav-right" class="nav-right">
+                    <a href="cart.html" title="Visit Cart"><i class="fa-solid fa-rocket"></i></a>
+                    <a href="user.html" title="View User Info"><i class="fa-regular fa-user"></i></a>
+                    <a href="javascript:void(0);" class="icon" title="View Options" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+                    <div id="myLinks">
+                        <a href="home.html">Home</a>
+                        <a href="guide.html">Guide</a>
+                        <a href="order.html">order</a>
+                        <a href="community.html">Community</a>
+                        <a href="aboutus.html">About Us</a>
+                    </div>
+                </div>        
+            </nav>
+            <div class="working-area">
                 <div class="content">
-                    <h1><span id="L">T</span>rack Your Order</h1>
+                    <h2><span id="L">T</span>rack Your Order</h2>
                     <div class="form">
                         <input id="order" type="text" placeholder="Enter Your Order ID">
                         <button type="submit" onclick="display()">Track</button>
@@ -39,6 +44,7 @@
                         <div class="info">
                             <p id="info"></p>
                             <p id="user"></p>
+                            <p id="expected">Expected delivery by: <span class="delivery-date">3 days</span></p>
                         </div>
                         <div class="tracking-progress">
                             <div class="tracking-stage">
@@ -79,7 +85,7 @@
                             </div>
                         </div>
                         <div class="expected-delivery">
-                            <p>Expected delivery by: <span class="delivery-date">3 days</span></p>
+                            
                         </div>
                     </div>
                 </div>
@@ -94,6 +100,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-    <script src="ordertracker.js"></script>
+    <script src="tracker.js"></script>
 </body>
 </html>
