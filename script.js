@@ -48,17 +48,31 @@ function login() {
       loginForm.style.transition = "transform 0.75s ease-in";
   }, 100);
 }
+
+function signedin(){
+  const username = document.getElementById('signup-form').elements[0].value;
+  const email = document.getElementById('signup-form').elements[1].value;
+  const password = document.getElementById('signup-form').elements[2].value;
+  const passwordStrengthRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+  
+  if (username && email && emailRegex.test(email)) {
+      login();
+  } else {
+      alert('Please ensure all fields are filled out correctly and the password is strong.');
+  }
+
+}
 document.getElementById('login-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
   const username = event.target.elements[0].value;
   const password = event.target.elements[1].value;
 
-  if (username === 'admin' && password === 'password') {
+  if (username !="" && password != "") {
       localStorage.setItem('username', username);
       window.location.href = 'home.html';
   } else {
-      
       alert('Login failed');
   }
 });

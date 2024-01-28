@@ -3,7 +3,7 @@ function display(){
     const trackInfo = document.getElementById('info');
     const userInfo = document.getElementById('user');
     const trackDiv = document.getElementById('track');
-    const storedUsername = localStorage.getItem('username');
+    const storedUsername = "Username";
 
     if (orderInput.value) {
         trackDiv.style.display = 'block';

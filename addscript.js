@@ -1,4 +1,4 @@
-const username=localStorage.getItem("username");
+const username="Username";
 document.getElementById("user").innerText=`${username}`;
 
 function submit(){

@@ -262,6 +262,8 @@ a:hover{
     flex-direction: column;
     align-items: center;
     overflow: scroll;
+    background-color: rgba(221, 221, 221,0.6);
+    border-radius: 10px;
 }
 
 .descp::-webkit-scrollbar {
@@ -382,4 +384,5 @@ button:hover{
     #contact{
         font-size: 3vw;
     }
+    
   }

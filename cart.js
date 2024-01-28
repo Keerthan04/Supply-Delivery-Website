@@ -1,4 +1,4 @@
-let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+/*let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 let cartTotal = localStorage.getItem('total') || '0';
 const itemsField = document.getElementById('items');
 
@@ -44,9 +44,9 @@ if (event.target.className === 'remove') {
     document.querySelector('.total').innerHTML = `Total: $${parseFloat(cartTotal).toFixed(2)}`;
     }
 }
-});
+});*/
 
-const storedUsername = localStorage.getItem('username');
+const storedUsername = "Username";
 
 if (storedUsername) {
   const details=document.getElementById("username");

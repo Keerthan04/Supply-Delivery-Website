@@ -1,4 +1,4 @@
-let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+/*let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 let cartTotal = localStorage.getItem('total') || '0';
 const itemsField = document.getElementById('items');
 
@@ -44,7 +44,7 @@ if (event.target.className === 'remove') {
     document.querySelector('.total').innerHTML = `Total: $${parseFloat(cartTotal).toFixed(2)}`;
     }
 }
-});
+});*/
 
 function myFunction() {
     var navRight = document.getElementById("nav-right");
@@ -69,7 +69,9 @@ function myFunction() {
         if (cartTotal === '0') {
             alert("No items in the cart to ship");
         } else {
-            
+            alert("Your order has been placed and will be shipped within 3 days.");
+                        localStorage.setItem('cart', JSON.stringify([])); 
+                        localStorage.setItem('total', '0'); 
         }
     }
 }

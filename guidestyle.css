@@ -280,4 +280,7 @@ button:hover{
     #but, .emergency {
       font-size: 3vw;
     }
+    #ul{
+        font-size: 2vh;
+    }
   }

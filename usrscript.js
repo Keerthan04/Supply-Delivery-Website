@@ -1,4 +1,4 @@
-const storedUsername = localStorage.getItem('username');
+const storedUsername = "Username";
 
 if (storedUsername) {
   const details=document.getElementById("username");

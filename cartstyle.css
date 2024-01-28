@@ -264,6 +264,10 @@ td{
     width:30%;
     height:100%;
 }
+#remove{
+    background-color: rgb(80, 77, 77);
+    border-radius: 10px;
+}
 .details{
     width:calc(100% - 40px);
     height:100%;
@@ -301,15 +305,10 @@ td{
     color: black;
     gap:20px;
 }
-.emergency{
-    padding: 1vw;
-    font-size: 2vw;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    background-color:rgb(143, 35, 35);
-    color: black;
-    gap:20px;
+.total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width: 650px) and (min-width: 200px) {
     .working-area {
